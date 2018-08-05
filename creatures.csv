@@ -1,0 +1,326 @@
+name,cr,ac,hp,init,att_num,hit_mod,dam_avg
+Aboleth,10,17,135,-1.9,3,9,12
+Acolyte,0.25,10,9,0.1,1,2,2
+Adult Black Dragon,14,19,195,2.14,3,2,17
+Adult Blue Dracolich,17,19,225,0.1,3,2,18
+Adult Blue Dragon,16,19,225,0.1,3,2,18
+Adult Brass Dragon,13,18,172,0.1,3,2,13
+Adult Bronze Dragon,15,19,212,0.1,3,2,18
+Adult Copper Dragon,14,18,184,1.12,3,2,17
+Adult Gold Dragon,17,19,256,2.14,3,2,19
+Adult Green Dragon,15,19,207,1.12,3,2,17
+Adult Red Dragon,17,19,256,0.1,3,2,19
+Adult Silver Dragon,16,19,243,0.1,3,2,19
+Adult White Dragon,13,18,200,0.1,3,2,17
+Air Elemental,5,15,90,5.2,2,2,2
+Ancient Black Dragon,21,22,367,2.14,3,2,19
+Ancient Blue Dragon,23,22,481,0.1,3,2,20
+Ancient Brass Dragon,20,20,297,0.1,3,2,15
+Ancient Bronze Dragon,22,22,444,0.1,3,2,20
+Ancient Copper Dragon,21,21,350,1.12,3,2,19
+Ancient Gold Dragon,24,22,546,2.14,3,2,21
+Ancient Green Dragon,22,21,385,1.12,3,2,19
+Ancient Red Dragon,24,22,546,0.1,3,2,21
+Ancient Silver Dragon,23,22,487,0.1,3,2,21
+Ancient White Dragon,20,20,333,0.1,3,2,19
+Androsphinx,17,17,199,0.1,2,2,2
+Animated Armor,1,18,33,0.11,2,2,2
+Ankheg,2,14,39,0.11,1,5,10
+Ape,0.5,12,19,2.14,2,5,10
+Archmage,12,12,99,2.14,1,6,4
+Assassin,8,15,78,3.16,2,6,4
+Awakened Shrub,0,9,10,-1.8,1,1,1
+Awakened Tree,2,13,59,-2.6,1,6,14
+Axe Beak,0.25,11,19,1.12,1,4,6
+Azer,2,17,39,1.12,1,5,7
+Baboon,0,12,3,2.14,1,1,1
+Badger,0,10,3,0.11,1,2,1
+Balor,19,19,262,2.15,2,2,1
+Bandit,0.125,12,11,1.12,1,3,4
+Bandit Captain,2,15,65,3.16,2,3,4
+Barbed Devil,5,15,110,3.17,3,3,4
+Basilisk,3,12,52,-1.8,1,5,10
+Bat,0,12,1,2.15,1,0,1
+Bearded Devil,3,13,52,2.15,2,0,1
+Behir,11,17,168,3.16,2,0,1
+Berserker,2,13,67,1.12,1,5,9
+Black Bear,0.5,11,19,0.1,2,5,9
+Black Dragon Wyrmling,2,17,33,2.14,1,4,7
+Black Pudding,4,7,85,-3.5,1,5,6
+Blink Dog,0.25,13,22,3.17,1,3,4
+Blood Hawk,0.125,12,7,2.14,1,4,4
+Blue Dragon Wyrmling,3,17,52,0.1,1,5,8
+Boar,0.25,11,11,0.11,1,5,8
+Bone Devil,12,19,142,3.16,3,5,8
+Brass Dragon Wyrmling,1,16,16,0.1,1,4,7
+Bronze Dragon Wyrmling,2,17,32,0.1,1,5,8
+Brown Bear,1,11,34,0.1,2,5,8
+Bugbear,1,16,27,2.14,1,4,9
+Bulette,5,17,94,0.11,1,7,30
+Camel,0.125,9,15,-1.8,1,5,2
+Carrion Crawler,2,13,51,1.13,2,5,2
+Cat,0,12,2,2.15,1,0,1
+Cave Bear,2,12,42,0.1,2,0,1
+Centaur,2,12,45,2.14,2,0,1
+Chain Devil,11,16,85,2.15,2,0,1
+Chimera,6,14,114,0.11,3,0,1
+Chuul,4,16,93,0.1,2,0,1
+Clay Golem,9,14,133,-1.9,2,0,1
+Cloaker,8,14,78,2.15,2,0,1
+Cloud Giant,9,14,200,0.1,2,0,1
+Cockatrice,0.5,11,27,1.12,1,3,3
+Commoner,0,10,4,0.1,1,2,2
+Constrictor Snake,0.25,12,13,2.14,1,4,6
+Copper Dragon Wyrmling,1,16,22,1.12,1,4,7
+Couatl,4,19,97,5.2,1,6,10
+Crab,0,11,2,0.11,1,0,1
+Crocodile,0.5,12,19,0.1,1,4,7
+Cult Fanatic,2,13,22,2.14,2,4,7
+Cultist,0.125,12,9,1.12,1,3,4
+Darkmantle,0.5,11,22,1.12,1,5,6
+Death Dog,1,12,39,2.14,2,5,6
+Deep Gnome (Svirfneblin),0.5,15,16,2.14,1,4,6
+Deer,0,13,4,3.16,1,2,2
+Deva,10,17,136,4.18,2,2,2
+Dire Wolf,1,14,37,2.15,1,5,10
+Djinni,11,17,161,2.15,3,5,10
+Doppelganger,3,14,52,4.18,2,5,10
+Draft Horse,0.25,10,19,0.1,1,6,9
+Dragon Turtle,17,20,341,0.1,3,6,9
+Dretch,0.25,11,18,0.11,2,6,9
+Drider,6,19,123,3.16,3,6,9
+Drow,0.25,15,13,2.14,1,4,5
+Druid,2,11,27,1.12,1,2,3
+Dryad,1,11,22,1.12,1,2,2
+Duergar,1,16,26,0.11,1,4,5
+Dust Mephit,0.5,12,17,2.14,1,4,4
+Eagle,0,12,3,2.15,1,4,4
+Earth Elemental,5,17,126,-1.8,2,4,4
+Efreeti,11,17,200,1.12,2,4,4
+Elephant,4,12,76,-1.9,1,8,22
+Elk,0.25,10,13,0.1,1,0,8
+Erinyes,12,18,153,3.16,3,0,8
+Ettercap,2,13,44,2.15,2,0,8
+Ettin,4,12,85,-1.8,2,0,8
+Fire Elemental,5,13,102,3.17,2,0,8
+Fire Giant,9,18,162,-1.9,2,0,8
+Flesh Golem,5,9,93,-1.9,2,0,8
+Flying Snake,0.125,14,5,4.18,1,6,1
+Flying Sword,0.25,17,17,2.15,1,3,5
+Frog,0,11,1,1.13,1,3,5
+Frost Giant,8,15,138,-1.9,2,3,5
+Gargoyle,2,15,52,0.11,2,3,5
+Gelatinous Cube,2,6,84,-4.3,1,4,10
+Ghast,2,13,36,3.17,1,5,10
+Ghost,4,11,45,1.13,1,5,17
+Ghoul,1,12,22,2.15,1,0,7
+Giant Ape,7,12,157,2.14,2,0,7
+Giant Badger,0.25,10,13,0.1,2,0,7
+Giant Bat,0.25,13,22,3.16,1,4,5
+Giant Boar,2,12,42,0.1,1,5,10
+Giant Centipede,0.25,13,4,2.14,1,5,10
+Giant Constrictor Snake,2,12,60,2.14,1,6,13
+Giant Crab,0.125,15,13,2.15,1,3,4
+Giant Crocodile,5,14,85,-1.9,2,3,4
+Giant Eagle,1,13,26,3.17,2,3,4
+Giant Elk,2,15,42,3.16,1,6,22
+Giant Fire Beetle,0,13,4,0.1,1,1,2
+Giant Frog,0.25,11,18,1.13,1,3,4
+Giant Goat,0.5,11,19,0.11,1,5,8
+Giant Hyena,1,12,45,2.14,1,5,10
+Giant Lizard,0.25,12,19,1.12,1,4,6
+Giant Octopus,1,11,52,1.13,1,5,10
+Giant Owl,0.25,12,19,2.15,1,3,8
+Giant Poisonous Snake,0.25,14,11,4.18,1,6,6
+Giant Rat,0.125,12,7,2.15,1,4,4
+Giant Rat (Diseased),0.125,12,7,2.15,1,4,3
+Giant Scorpion,3,15,52,1.13,3,4,6
+Giant Sea Horse,0.5,13,16,2.15,1,3,4
+Giant Shark,5,13,126,0.11,1,3,4
+Giant Spider,1,14,26,3.16,1,5,7
+Giant Toad,1,11,39,1.13,1,4,7
+Giant Vulture,1,10,22,0.1,2,4,7
+Giant Wasp,0.5,12,13,2.14,1,4,7
+Giant Weasel,0.125,13,9,3.16,1,4,7
+Giant Wolf Spider,0.25,13,11,3.16,1,4,7
+Gibbering Mouther,2,9,67,-1.8,1,4,7
+Glabrezu,9,17,157,2.15,2,4,7
+Gladiator,5,16,112,2.15,3,4,7
+Gnoll,0.5,15,22,1.12,1,4,5
+Goat,0,10,4,0.1,1,3,3
+Goblin,0.25,15,7,2.14,1,4,5
+Gold Dragon Wyrmling,3,17,60,2.14,1,6,9
+Gorgon,5,19,114,0.11,1,8,16
+Gray Ooze,0.5,8,22,-2.6,1,3,4
+Green Dragon Wyrmling,2,17,38,1.12,1,4,7
+Green Hag,3,17,82,1.12,1,6,13
+Grick,2,14,27,2.14,1,6,13
+Griffon,2,12,59,2.15,2,6,13
+Grimlock,0.25,11,11,1.12,1,5,5
+Guard,0.125,16,11,1.12,1,3,4
+Guardian Naga,10,18,127,4.18,1,8,8
+Gynosphinx,11,17,136,2.15,2,8,8
+Half-Red Dragon Veteran,5,18,65,1.13,2,8,8
+Harpy,1,11,38,1.13,2,8,8
+Hawk,0,13,1,3.16,1,5,1
+Hell Hound,3,15,45,1.12,1,5,7
+Hezrou,8,16,136,3.17,3,5,7
+Hill Giant,5,13,105,-1.8,2,5,7
+Hippogriff,1,11,19,1.13,2,5,7
+Hobgoblin,0.5,18,11,1.12,1,3,5
+Homunculus,0,13,5,2.15,1,4,1
+Horned Devil,11,18,148,3.17,3,4,1
+Hunter Shark,2,12,45,1.13,1,6,13
+Hydra,8,15,172,1.12,5,6,13
+Hyena,0,11,5,1.13,1,6,13
+Ice Devil,14,18,180,2.14,3,6,13
+Ice Mephit,0.5,11,21,1.13,1,3,3
+Imp,1,13,10,3.17,1,5,5
+Invisible Stalker,6,14,104,4.19,2,5,5
+Iron Golem,16,20,210,-1.9,2,5,5
+Jackal,0,12,3,2.15,1,1,1
+Killer Whale,3,12,90,0.1,1,0,21
+Knight,3,18,52,0.11,2,0,21
+Kobold,0.125,12,5,2.15,1,4,4
+Kraken,23,18,472,0.11,3,4,4
+Lamia,4,13,97,1.13,2,4,4
+Lemure,0,7,13,-3.5,1,3,2
+Lich,21,17,135,3.16,1,12,10
+Lion,1,12,26,2.15,1,5,6
+Lizard,0,10,2,0.11,1,0,1
+Lizardfolk,0.5,15,22,0.1,2,0,1
+Mage,6,12,40,2.14,1,5,4
+Magma Mephit,0.5,11,22,1.12,1,3,3
+Magmin,0.5,14,9,2.15,1,4,7
+Mammoth,6,13,126,-1.9,1,10,29
+Manticore,3,14,68,3.16,3,10,29
+Marilith,16,18,189,5.2,7,10,29
+Mastiff,0.125,12,5,2.14,1,3,4
+Medusa,6,15,127,2.15,3,3,4
+Merfolk,0.125,11,11,1.13,1,2,3
+Merrow,2,13,45,0.1,2,2,3
+Mimic,2,12,58,1.12,1,5,7
+Minotaur,3,14,76,0.11,1,6,13
+Minotaur Skeleton,2,12,67,0.11,1,6,13
+Mule,0.125,10,11,0.1,1,4,4
+Mummy,3,11,58,-1.8,1,4,4
+Mummy Lord,15,17,97,0.1,1,4,4
+Nalfeshnee,13,18,184,0.1,3,4,4
+Night Hag,5,17,112,2.15,1,7,13
+Nightmare,3,13,68,2.15,1,6,13
+Noble,0.125,15,9,1.12,1,3,5
+Ochre Jelly,2,8,45,-2.6,1,4,9
+Octopus,0,12,3,2.15,1,4,1
+Ogre,2,11,59,-1.8,1,6,11
+Ogre Zombie,2,8,85,-2.6,1,6,13
+Oni,7,16,110,0.11,2,6,13
+Orc,0.5,13,15,1.12,1,5,6
+Otyugh,5,14,114,0.11,3,5,6
+Owl,0,11,1,1.13,1,3,1
+Owlbear,3,13,59,1.12,2,3,1
+Panther,0.25,12,13,2.15,1,4,4
+Pegasus,2,12,59,2.15,1,6,11
+Phase Spider,3,13,32,2.15,1,4,7
+Pit Fiend,20,19,300,2.14,4,4,7
+Planetar,16,19,200,5.2,2,4,7
+Plesiosaurus,2,13,68,2.15,1,6,14
+Poisonous Snake,0.125,13,2,3.16,1,5,1
+Polar Bear,2,12,42,0.1,2,5,1
+Pony,0.125,10,11,0.1,1,4,7
+Priest,2,13,27,0.1,1,2,3
+Pseudodragon,0.25,13,7,2.15,1,4,4
+Purple Worm,15,18,247,-2.7,2,4,4
+Quasit,1,13,7,3.17,1,4,5
+Quipper,0,13,1,3.16,1,5,1
+Rakshasa,13,16,110,3.17,2,5,1
+Rat,0,10,1,0.11,1,0,1
+Raven,0,12,1,2.14,1,0,1
+Red Dragon Wyrmling,4,17,75,0.1,1,6,9
+Reef Shark,0.5,12,22,1.13,1,4,6
+Remorhaz,11,17,195,1.13,1,11,40
+Rhinoceros,2,11,45,-1.8,1,7,14
+Riding Horse,0.25,10,13,0.1,1,5,8
+Roc,11,15,248,0.1,2,5,8
+Roper,5,20,93,-1.8,1,5,8
+Rug of Smothering,2,12,33,2.14,1,0,
+Rust Monster,0.5,14,27,1.12,1,3,5
+Saber-Toothed Tiger,2,12,52,2.14,1,6,12
+Sahuagin,0.5,12,22,0.11,2,6,12
+Salamander,5,15,90,2.14,2,6,12
+Satyr,0.5,14,31,3.16,1,5,6
+Scorpion,0,11,1,0.11,1,2,1
+Scout,0.5,13,16,2.14,2,2,1
+Sea Hag,2,14,52,1.13,1,5,10
+Sea Horse,0,11,1,1.12,1,5,10
+Shadow,0.5,12,16,2.14,1,4,9
+Shambling Mound,5,15,136,-1.8,2,4,9
+Shield Guardian,7,17,142,-1.8,2,4,9
+Shrieker,0,5,13,-5.1,1,4,9
+Silver Dragon Wyrmling,2,17,45,0.1,1,6,9
+Skeleton,0.25,13,13,2.14,1,4,5
+Solar,21,21,243,6.22,2,4,5
+Specter,1,12,22,2.14,1,4,10
+Spider,0,12,1,2.14,1,4,1
+Spirit Naga,8,15,75,3.17,1,7,7
+Sprite,0.25,15,2,4.18,1,2,1
+Spy,1,12,27,2.15,2,2,1
+Steam Mephit,0.25,10,21,0.11,1,2,2
+Stirge,0.125,14,2,3.16,1,5,5
+Stone Giant,7,17,126,2.15,2,5,5
+Stone Golem,10,17,178,-1.9,2,5,5
+Storm Giant,13,16,230,2.14,2,5,5
+Succubus/Incubus,4,15,66,3.17,1,5,6
+Swarm of Bats,0.25,12,22,2.15,1,4,5
+Swarm of Beetles,0.5,12,22,1.13,1,3,10
+Swarm of Centipedes,0.5,12,22,1.13,1,3,10
+Swarm of Insects,0.5,12,22,1.13,1,3,10
+Swarm of Poisonous Snakes,2,14,36,4.18,1,6,7
+Swarm of Quippers,1,13,28,3.16,1,5,14
+Swarm of Rats,0.25,10,24,0.11,1,2,7
+Swarm of Ravens,0.25,12,24,2.14,1,4,7
+Swarm of Spiders,0.5,12,22,1.13,1,3,10
+Swarm of Wasps,0.5,12,22,1.13,1,3,10
+Tarrasque,30,25,676,0.11,5,3,10
+Thug,0.5,11,32,0.11,2,3,10
+Tiger,1,12,37,2.15,1,0,7
+Treant,9,16,138,-1.8,2,0,7
+Tribal Warrior,0.125,12,11,0.11,1,3,4
+Triceratops,5,13,95,-1.9,1,9,22
+Troll,5,15,84,1.13,3,9,22
+Tyrannosaurus Rex,8,13,136,0.1,2,9,22
+Unicorn,5,12,67,2.14,2,9,22
+Vampire,13,16,144,4.18,1,9,7
+Vampire Spawn,5,15,82,3.16,2,9,7
+Veteran,3,17,58,1.13,2,9,7
+Violet Fungus,0.25,5,18,-5.1,2,9,7
+Vrock,6,15,104,2.15,2,9,7
+Vulture,0,10,5,0.1,1,2,2
+Warhorse,0.5,11,19,1.12,1,6,11
+Warhorse Skeleton,0.5,13,22,1.12,1,6,11
+Water Elemental,5,14,114,2.14,2,6,11
+Weasel,0,13,1,3.16,1,5,1
+Werebear,5,10,135,0.1,2,5,1
+Wereboar,4,10,78,0.1,1,5,10
+Wererat,2,12,33,2.15,1,4,5
+Weretiger,4,12,120,2.15,1,5,6
+Werewolf,3,11,58,1.13,1,4,5
+White Dragon Wyrmling,2,16,32,0.1,1,4,7
+Wight,3,14,45,2.14,2,4,7
+Will-o'-Wisp,2,19,22,9.28,1,4,9
+Winter Wolf,3,13,75,1.13,1,6,11
+Wolf,0.25,13,11,2.15,1,4,7
+Worg,0.5,13,26,1.13,1,5,10
+Wraith,5,13,67,3.16,1,6,21
+Wyvern,6,13,110,0.1,2,6,11
+Xorn,5,19,73,0.1,3,6,21
+Young Black Dragon,7,18,127,2.14,3,6,15
+Young Blue Dragon,9,18,152,0.1,3,6,16
+Young Brass Dragon,6,17,110,0.1,3,6,11
+Young Bronze Dragon,8,18,142,0.1,3,6,16
+Young Copper Dragon,7,17,119,1.12,3,6,15
+Young Gold Dragon,10,18,178,2.14,3,6,17
+Young Green Dragon,8,18,136,1.12,3,6,15
+Young Red Dragon,10,18,178,0.1,3,6,17
+Young Silver Dragon,9,18,168,0.1,3,6,17
+Young White Dragon,6,17,133,0.1,3,6,15
+Zombie,0.25,8,22,-2.6,1,3,4
