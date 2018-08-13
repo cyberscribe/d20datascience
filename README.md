@@ -68,7 +68,7 @@ Finally, an optional `name` label can be added to refer to each collection of at
 
 While [v5.1 of the System Reference Document (SRD)](http://dnd.wizards.com/articles/features/systems-reference-document-srd) provides several hundred pre-configured creatures, the distribution of creatures across challenge ratings is heavily skewed toward the lower values.
 
-
+!["Distribution of CR for SRD v5.1 Creatures"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/cr-dist-srd.png "Distribution of CR for SRD v5.1 Creatures")
 
 Creating our own **generic creatures** and **generic characters** is therefore more useful to our investigations.
 
