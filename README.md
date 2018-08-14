@@ -75,9 +75,37 @@ Details of the computational analysis are provided in the form of a [Jupyter not
 
 ## Findings
 
-## Interpreation
+### [Correlation Between Combat Success and Attributes](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb#Correlation-Between-Combat-Success-and-Attributes)
 
-## Conculsion
+Not surprisingly, there is almost no correlation (r ~ r=0.02) between `init` (initiative) and combat success. While "first mover advantage" may apply in the real, complex game in relation to decisive initial moves, over a large-scale simulation initiative serves as a "tie breaker" only in very rare cases where entities are so well matched that a single turn of combat can decide the outcome.
+
+More surprisingly, `ac` (armour class) and `hit_mod` (hit modifier) also had almost no correaltion to combat success (r ~ 0.08 in both cases). Given the extent to which armour is seen as a measure of defensive effectiveness and the hit modifier is seen as a measure of offensive effectiveness, this may seem counter-intuitive to longtime players. One explanation is that the use of critical success and critical fail mechanics significantly level the playing field. 
+
+Any entitiy has a 5% chance of failure no matter how high their hit modifier and how low the target armour class. Conversely, any entitiy has a 5% chance of success no matter how low their hit modifier and how high the target armour class. So the mechanics of hitting or missing only take `ac` and `hit_mod` into account 90% of the time. Within this scope, there are very few other always-hit or always-miss scenarios. 
+
+As a result, hitting or missing a target on a single turn, while incredibly dramatic and significant in the context of a single encounter, is less signficiant over a large number of combat encounters, and therefore armour and weapon proficiency are not as signficant to combat success overall as one might initially surmise.
+
+However, `att num` (number of attacks) showed a stronger correlation to combat success (r ~ 0.42) as did `dam_avg` (r ~ 0.48). The product of these two, which we call `dam_max` (maximum average damage output per turn) showed a slightly higher correlation (r ~ 0.58) as did `hp` (hit points) (r ~ r=0.57).
+
+Combining `dam_max` and `hp` into a new metric by taking the square root of their product gives us `hp_dam` (hit-point-damage metric) with a very strong (r ~ 0.93) correlation to combat effectiveness.
+
+!["Correlation Between dam_max and Combat Effectiveness"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/hp_dam.png "Randomly-Generated Creatures")
+
+In short, an entity's ability to deliver damage (`dam_max`) rapidly and take damage over time without dying (`hp`) are the most significant controling factors in combat success, and should be considered as the most influential when determining creature challenge rating.
+
+### [Generic Characters and Creatures](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb#Generic-Characters-and-Creatures)
+
+Using published guidelines, it was possible to create generic characters and creatures, including parties composed of all one character type (fighter, wizard) that exhibited a strong correlation between challenge rating and combat success rate and even distribution/progression for that type in contests composed of entities entirely of that type. This allows us to perform contests with mixed types.
+
+### [Contests Between Characters and Creatures](Contests Between Characters and Creatures)
+
+!["Correlation Between CR and Wins"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/characters-1monster.png "Party of 4 and Single Monster")
+
+!["Correlation Between CR and Wins"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/characters-to30monsters.png "Party of 4 and 1-30 CR 1 Monsters")
+
+## Interpretation
+
+## Conclusion
 
 ## Definition of Terms
 
