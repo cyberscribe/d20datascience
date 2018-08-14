@@ -126,6 +126,10 @@ Using published guidelines, it was possible to create generic characters and cre
 
 [Jupyter notebook containing all experiments](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb)
 
+## Acknowledgments
+
+Thanks to Robert Staton for providing review.
+
 ## Legal Disclaimer
 
-This research is provided for educational purposes and is based on the game mechanics of the [SRD 5.1](http://dnd.wizards.com/articles/features/systems-reference-document-srd) licensed under [OGL v.01a](https://dnd.wizards.com/articles/features/systems-reference-document-srd) as well as researcher interpretations of guidelines set out in the Player's Handbook (Wizards of the Coast, August 2014) and Dungeon Master's Guide (Wizards of the Coast, December 2014). No license, contract, or agreement is hereby expressed or implied by the researcher in respect to the owner of the world's greatest role-playing game or its respective copyright or trademarks.
+This research is provided for educational purposes and is based on the game mechanics of the [SRD 5.1](http://dnd.wizards.com/articles/features/systems-reference-document-srd) licensed under [OGL v.01a](https://dnd.wizards.com/articles/features/systems-reference-document-srd) as well as researcher interpretations of guidelines set out in the Player's Handbook (Wizards of the Coast, August 2014) and Dungeon Master's Guide (Wizards of the Coast, December 2014). No license, contract, or agreement is hereby expressed or implied by the researcher in respect to the owner of the world's greatest role-playing game or its respective copyrights or trademarks.
