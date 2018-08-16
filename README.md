@@ -22,7 +22,13 @@ A combat encounter that is too easy can be boring; one that is far too difficult
 However, even within the scope of combat, one subset of the role-playing experience, an encounter can include variables such as: unique terrain features, the starting distance of the encounter, complex spells, powerful magic items, and the relative experience of the game master and players in these types of combat situations. It is therefore impossible to fully simulate all of the factors involved either mathematically or computationally.
 
 ### Simulating Simplified Combat
-That said, while the **fundamental mechanic** of melee combat is somewhat more complicated to describe mathematically, it is relatively straightforward to simulate computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to determine the relative effectiveness of such configurations in relation to this fundamental mechanic.
+
+#### Mathematical Complexity
+The **fundamental mechanic** of melee combat is difficult to describe mathematically, due in part to the progressions of probable damage outputs across alternating turns and the implications of these probabilities on the overall velocity of the "race toward death" that combat represents. This is complicated in particular by the varying number of attacks per turn. For example, an entity with a 1/20 chance to deal 20 damage to an opponent with 5 `hp` remaining using a single attack has a lower chance of a next-turn kill than an entity with four attcks (single hit probability 4/20) dealing 5 damage, despite both entities having the same average damage ouptut. Therefore despite the low number of variables involved, describing all of these threshold cases analytically remains intractable.
+
+#### Monte Carlo Simulation
+
+However, it is relatively straightforward to simulate this scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on relative stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
 
 ### Implications of Simulation Results
 This fundamental mechanic may also serve as a useful proxy for combat effectiveness within the real, complex game. Assuming this is true, we can make deductions about the relative influence of various configutation elements on combat effectiveness within the actual game. 
@@ -71,19 +77,31 @@ Creating our own **generic creatures** and **generic characters** using a more e
 
 ## Computational Analysis
 
-Details of the computational analysis are provided in the form of a [Jupyter notebook](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb).
+Details of the computational analysis are provided in the form of a [Jupyter notebook](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb), which can be executed to reproduce the results of all experiments described.
 
 ## Findings
 
 ### [Correlation Between Combat Success and Attributes](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb#Correlation-Between-Combat-Success-and-Attributes)
 
+### Init Doesn't Matter Very Much
+
 Not surprisingly, there is almost no correlation (r ~ 0.02) between `init` (initiative) and combat success. While "first mover advantage" may apply in the real, complex game in relation to decisive initial moves, over a large-scale simulation initiative serves as a "tie breaker" only in very rare cases where entities are so well matched that a single turn of combat can decide the outcome.
 
-More surprisingly, `ac` (armour class) and `hit_mod` (hit modifier) also had almost no correaltion to combat success (r ~ 0.08 in both cases). Given the extent to which armour is seen as a measure of defensive effectiveness and the hit modifier is seen as a measure of offensive effectiveness, this may seem counter-intuitive to longtime players. One explanation is that the use of critical success and critical fail mechanics significantly level the playing field. 
+### Niether Does AC or Hit Mod
 
-Any entitiy has a 5% chance of failure no matter how high their hit modifier and how low the target armour class. Conversely, any entitiy has a 5% chance of success no matter how low their hit modifier and how high the target armour class. So the mechanics of hitting or missing only take `ac` and `hit_mod` into account 90% of the time. Within this scope, there are very few other always-hit or always-miss scenarios. 
+More surprisingly, `ac` (armour class) and `hit_mod` (hit modifier) also had almost no correaltion to combat success (r ~ 0.08 in both cases). Given the extent to which armour is seen as a measure of defensive effectiveness and the hit modifier is seen as a measure of offensive effectiveness, this may seem counter-intuitive to longtime players. 
 
-As a result, hitting or missing a target on a single turn, while incredibly dramatic and significant in the context of a single encounter, is less signficiant over a large number of combat encounters, and therefore armour and weapon proficiency are not as signficant to combat success overall as one might initially surmise.
+### The Role of Crit Rules
+
+One explanation is that the use of critical success and critical fail mechanics ("crit rules") significantly level the playing field. Under these rules, any entitiy has a 5% chance of failure no matter how high their hit modifier and how low the target armour class. Conversely, any entitiy has a 5% chance of success no matter how low their hit modifier and how high the target armour class. So the mechanics of hitting or missing only take `ac` and `hit_mod` into account 90% of the time. Within this scope, there are very few other always-hit or always-miss scenarios. 
+
+However, while combat scenarios in which crit rules were not implemented, the relevance of `ac` and `hit_mod` increased but not to highly significant levels (r ~ 0.14 and r ~ 0.27, respectively). So, while crit rules do reduce the relevance of `ac` and `hit_mod` in relation to combat success, they are not the only factor at play.
+
+### Single-Event Perception versus Many Events
+
+Ultimately, hitting or missing a target on a single turn, while incredibly dramatic and significant in the context of a single encounter, is less signficiant over a large number of combat encounters, and therefore armour and weapon proficiency are not as signficant to combat success overall as one might initially surmise.
+
+### Dealing and Soaking Up Damage
 
 However, `att num` (number of attacks) showed a stronger correlation to combat success (r ~ 0.42) as did `dam_avg` (r ~ 0.48). The product of these two, which we call `dam_max` (maximum average damage output per turn) showed a slightly higher correlation (r ~ 0.58) as did `hp` (hit points) (r ~ 0.57).
 
@@ -95,15 +113,25 @@ In short, an entity's ability to deliver damage (`dam_max`) rapidly and take dam
 
 ### [Generic Characters and Creatures](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb#Generic-Characters-and-Creatures)
 
-Using published guidelines, it was possible to create generic characters and creatures, including parties composed of all one character type (fighter, wizard) that exhibited a strong correlation between challenge rating and combat success rate and even distribution/progression for that type in contests composed of entities entirely of that type. This allows us to perform contests with mixed types.
+Using published guidelines, it was possible to create generic characters and creatures, including parties composed of all one character type (fighter, wizard) that exhibited a strong correlation between challenge rating and combat success rate and even distribution/progression for that type in contests composed of entities entirely of that type. This allows us to perform contests with mixed types with confidence that the results for each type will be representative of the progression for that type.
 
 ### [Contests Between Characters and Creatures](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb#Contests-Between-Characters-and-Creatures)
 
-!["Correlation Between CR and Wins"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/characters-1monster.png "Party of 4 and Single Monster")
+The results of a contest between 1-30 CR 1 monsters, single monsters whose CR ranged from 1-30, a party of 4 generic human fighters, and a party of 4 generic elven wizards can be visualised as follows.
 
-!["Correlation Between CR and Wins"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/characters-to30monsters.png "Party of 4 and 1-30 CR 1 Monsters")
+!["Correlation Between CR and Wins"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/mixed-all.png "Party of 4, Single Monster, and 1-30 CR 1 Monsters")
 
-## Interpretation
+Clearly, the effect of having a linear progression of the number of attacks in the scenario of 1-30 CR 1 monsters is significantly more predictive of combat success than the comparable progression through CR levels of a single monster. It has the strongest performance overall, but is very closely matched by that of a party of four fighters.
+
+The single monster scenario under-peforms against these two considerably, and the party of four wizards does considerably even worse. However, the relative distance between the fighter party and wizard party from the single monster trendline would seem to indicate that a more typical "mixed" party, which we would presume to form a composite average of the two extremes, would be relatively well matched to the single-monster scenario performance line.
+
+It is also interesting to note the somewhat elliptical shape of the outer progressions, converging at CR1 and CR 30. This would seem to indicate a deceleration in combat effectiveness for the most powerful groups, whereas the single monster scenario performance remains more linear.
+
+## Machine Learning Classification of Characters and Creatures
+
+## Interpretation of Results
+
+## Opportunities for Further Study
 
 ## Conclusion
 
