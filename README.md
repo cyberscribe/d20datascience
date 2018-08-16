@@ -127,7 +127,21 @@ The single monster scenario under-peforms against these two considerably, and th
 
 It is also interesting to note the somewhat elliptical shape of the outer progressions, converging at CR1 and CR 30. This would seem to indicate a deceleration in combat effectiveness for the most powerful groups, whereas the single monster scenario performance remains more linear.
 
-## Machine Learning Classification of Characters and Creatures
+## K-Nearest-Neighbours Classification
+
+The k-nearest-neighbours ("knn") machine learning algorithm offers us a convenient way to compute the euclidian distance between points in n-space (where n is the number of quantified attributes) and classify new points based on their proximity to k points with known classifications. Using the *generic creatures* created using published guidelines as the classified points (training set), we can then classify our parties of wizards and fighters based on their proximity to corresponding points in the generic creatures data set.
+
+!["Correlation Between Actual CR and Predicted CR"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/fighters-knn.png "Party of 4 Fighters as predicted from generic monsters (k=5)")
+
+In the case of fighters, the trend (curve shape) of the predictions, as well as the endpoint values, match that of our contest values. This indicates some deceleration in combat effectiveness at the higher levels. However, a level 20 figher party is still both able to take on a cr 30 monster in simulated simplified melee combat, and also shares the most traits in common in terms of the euclidian distance relative to all of its attributes with a CR 30 monster.
+
+!["Correlation Between Actual CR and Predicted CR"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/wizards-knn.png "Party of 4 Wizards as predicted from generic monsters (k=5)")
+
+In the case of wizards, the trend (curve shape) of the predictions again matches that of the contest values. However, the wizard cr classifcations based on attributes are more closely aligned level-for-cr with those of the generic monsters. This may indicate that the results of a four-type contest tends to unfairly disadvantage the least-poewrful group. 
+
+However, we again note an acceleration over time in classified challenge rating which matches the acceleration in combat effectiveness.
+
+So, according to both contest results and classification results, wizards get somewhat better as they increase in level whereas fighers get somewhat worse. Still, fighters end up able to take on monsters of a cr nearly 150% of their rated level by the time they reach level 20.
 
 ## Interpretation of Results
 
