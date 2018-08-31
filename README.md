@@ -28,7 +28,7 @@ The **fundamental mechanic** of melee combat is difficult to describe mathematic
 
 #### Monte Carlo Simulation
 
-However, it is relatively straightforward to simulate this scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on relative stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
+However, it is relatively straightforward to simulate this scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
 
 ### Implications of Simulation Results
 This fundamental mechanic may also serve as a useful proxy for combat effectiveness within the real, complex game. Assuming this is true, we can make deductions about the relative influence of various configuration elements on combat effectiveness within the actual game. 
@@ -37,7 +37,7 @@ Doing so can, for example, help us to gauge the accuracy of the current level an
 
 ## Existing Research
 
-There have been a number (e.g. [here](http://surfarcher.blogspot.com/2014/12/d-5e-monsters-part-10-construction-cr.html) and [here](http://blogofholding.com/?p=7338)) of mathematical analyses of the relationship between player or character attributes and challenge rating, conducted in an attempt to challenge and simplify the published formula for calculating the challenge rating of a custom-built creature. However, to date I am not aware of any analyses that simulate combat computationally and/or use machine learning in an attempt to infer these relationships.
+There have been a number (e.g. [here](http://surfarcher.blogspot.com/2014/12/d-5e-monsters-part-10-construction-cr.html) and [here](http://blogofholding.com/?p=7338)) of mathematical analyses of the relationship between player or character attributes and challenge rating, conducted in an attempt to both test and simplify the published formula for calculating the challenge rating of a custom-built creature. [Matteo Ferla](http://home-matteo-ferla.a3c1.starter-us-west-1.openshiftapps.com/dnd) has programmed an extensive simulation of combat and drawn some conclusions. However, to date I am not aware of any analyses that simulate combat computationally on a wide scale in an attempt to infer these relationships using linear regression and machine learning.
 
 ## Methodology
 
@@ -91,7 +91,7 @@ Details of the computational analysis are provided in the form of a [Jupyter not
 
 Not surprisingly, there is almost no correlation (r ~ 0.02) between `init` (initiative) and combat success. While "first mover advantage" may apply in the real, complex game in relation to decisive initial moves, over a large-scale simulation initiative serves as a "tie breaker" only in very rare cases where entities are so well matched that a single turn of combat can decide the outcome.
 
-### Neither Does AC or Hit Mod (!)
+### Neither Does AC or Hit Mod
 
 More surprisingly, `ac` (armour class) and `hit_mod` (hit modifier) also had almost no correlation to combat success (r ~ 0.08 in both cases). Given the extent to which armour is seen as a measure of defensive effectiveness and the hit modifier is seen as a measure of offensive effectiveness, this may seem counter-intuitive to long-time players. 
 
