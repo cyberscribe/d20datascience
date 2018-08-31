@@ -24,7 +24,7 @@ However, even within the scope of combat--one subset of the role-playing experie
 ### Simulating Simplified Combat
 
 #### Mathematical Complexity
-The **fundamental mechanic** of melee combat is difficult to describe mathematically, due in part to the progressions of probable damage outputs across alternating turns and the implications of these probabilities on the overall velocity of the "race toward death" that combat represents. This is complicated in particular by the varying number of attacks per turn. For example, an entity with a 1/20 chance to deal 20 damage to an opponent with 5 `hp` remaining using a single attack has a lower chance of a next-turn kill than an entity with four attacks (single hit probability 4/20) dealing 5 damage, despite both entities having the same average damage output. Therefore, despite the low number of variables involved, describing all of these threshold cases analytically remains intractable.
+The **fundamental mechanic** of melee combat is difficult to describe mathematically, due in part to the progressions of probable damage outputs across alternating turns and the implications of these probabilities on the overall velocity of the "race toward death" that combat represents. This is complicated in particular by the varying number of attacks per turn. For example, an entity with a 1/20 chance to deal 20 damage to an opponent with 5 `hp` remaining using a single attack has a lower chance of a next-turn kill than an entity with four attacks (single hit probability 4/20) dealing 5 damage, despite both entities having the same average damage output. Therefore, despite the low number of variables involved, describing all of these threshold cases analytically remains potentially calcuable, but complex.
 
 #### Monte Carlo Simulation
 
@@ -196,8 +196,12 @@ Using regression analysis and machine learning, we have gained insights into the
 
 ## Acknowledgments
 
-Thanks to Robert Staton and Matteo Ferla for reviewing and commenting on this research. Special thanks to instructors in the [UC Berkeley edX Data8x course](https://data.berkeley.edu/education/data-8x), upon which the methodologies used in this research are based.
+Thanks to Robert Staton, Matteo Ferla, and Moritz Speicher for reviewing and commenting on this research. Special thanks to instructors in the [UC Berkeley edX Data8x course](https://data.berkeley.edu/education/data-8x), upon which the methodologies used in this research are based.
 
 ## Legal Disclaimer
 
-This research is provided for educational purposes and is based on the game mechanics of the [SRD 5.1](http://dnd.wizards.com/articles/features/systems-reference-document-srd) licensed under [OGL v.01a](https://dnd.wizards.com/articles/features/systems-reference-document-srd) as well as researcher interpretations of guidelines set out in the Player's Handbook (Wizards of the Coast, August 2014) and Dungeon Master's Guide (Wizards of the Coast, December 2014). No license, contract, or agreement is hereby expressed or implied by the researcher in respect to the owner of the world's greatest role-playing game or its respective copyrights or trademarks.
+This research is provided for educational purposes and is based on the game mechanics of the [SRD 5.1](http://dnd.wizards.com/articles/features/systems-reference-document-srd) licensed under [OGL v.01a](https://dnd.wizards.com/articles/features/systems-reference-document-srd) as well as researcher interpretations of guidelines set out in the Player's Handbook (Wizards of the Coast, August 2014) and Dungeon Master's Guide (Wizards of the Coast, December 2014). 
+
+No license, contract, or agreement is hereby expressed or implied by the researcher in respect to the owner of the world's greatest role-playing game or its respective copyrights or trademarks. 
+
+This research is also not sponsored or endorsed by anyone mentioned in the acknowledgments, including UC Berkeley, edX, or the instructors of data8x.
