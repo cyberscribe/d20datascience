@@ -35,6 +35,10 @@ This fundamental mechanic may also serve as a useful proxy for combat effectiven
 
 Doing so can, for example, help us to gauge the accuracy of the current level and challenge rating system as well as provide game masters with a deeper understanding of the components of combat effectiveness overall. This will in turn help them to create combat encounters that are informed, intentional, and appropriate to the circumstances of their game.
 
+## Existing Research
+
+There have been a number (e.g. [here](http://surfarcher.blogspot.com/2014/12/d-5e-monsters-part-10-construction-cr.html) and [here](http://blogofholding.com/?p=7338)) of mathematical analyses of the relationship between player or character attributes and challenge rating, conducted in an attempt to challenge and simplify the published formula for calculating the challenge rating of a custom-built creature. However, to date I am not aware of any analyses that simulate combat compuptationally and/or use machine learning in an attempt to infer these relationships.
+
 ## Methodology
 
 Round-robin simulations of combat were performed in various contests between assembled characters and creatures to determine rankings of combat effectiveness for each entity configuration in relation to the **fundamental mechanic** (Monte Carlo simulation). The results were then analysed using regression analysis and machine learning (k-nearest-neighbours) to make conclusions about the relative influence of various configutation elements on combat effectiveness in relation to the fundamental mechanic. These results were then interpreted by an experienced game master to provide insights into how these findings might be applied by game masters in relation to the actual, more complex game.
@@ -99,6 +103,8 @@ However, while combat scenarios in which crit rules were not implemented, the re
 
 ### Single-Event Perception versus Many Events
 
+Within the range of `ac` and `hit_mod`, certain outliers will almost never hit or never miss. Over a large-scale analysis, however, those configurations closer to the mean tend to indicate that the latter metrics matter more.
+
 Ultimately, hitting or missing a target on a single turn, while incredibly dramatic and significant in the context of a single encounter, is less signficiant over a large number of combat encounters, and therefore armour and weapon proficiency are not as signficant to combat success overall as one might initially surmise.
 
 ### Dealing and Soaking Up Damage
@@ -127,9 +133,9 @@ The single monster scenario under-peforms against these two considerably, and th
 
 It is also interesting to note the somewhat elliptical shape of the outer progressions, converging at CR1 and CR 30. This would seem to indicate a deceleration in combat effectiveness for the most powerful groups, whereas the single monster scenario performance remains more linear.
 
-## K-Nearest-Neighbours Classification
+## [K-Nearest-Neighbours Classification](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb#Classifying-fighters-using-k-nearest-neighbours-(k=5)-trained-on-generic-monsters)
 
-The k-nearest-neighbours ("knn") machine learning algorithm offers us a convenient way to compute the euclidian distance between points in n-space (where n is the number of quantified attributes) and classify new points based on their proximity to k points with known classifications. Using the *generic creatures* created using published guidelines as the classified points (training set), we can then classify our parties of wizards and fighters based on their proximity to corresponding points in the generic creatures data set.
+The k-nearest-neighbours ("knn") machine learning algorithm offers us a convenient way to compute the euclidian distance between points in n-space (where n is the number of quantified attributes) and classify new points based on their proximity to k points with known classifications. There is also [some indication that this form of analysis can provide a "tigther" fit than multiple linear regresssion analysis](https://www.researchgate.net/publication/265978662_Comparing_K_nearest_neighbours_methods_and_Linear_regression-is_there_reason_to_select_one_Over_the_other). Using the `generic creatures` created using published guidelines as the classified points (training set), we can then classify our parties of wizards and fighters based on their proximity to corresponding points in the generic creatures data set.
 
 !["Correlation Between Actual CR and Predicted CR"](https://raw.githubusercontent.com/cyberscribe/d20datascience/master/images/fighters-knn.png "Party of 4 Fighters as predicted from generic monsters (k=5)")
 
@@ -145,9 +151,29 @@ So, according to both contest results and classification results, wizards get so
 
 ## Interpretation of Results
 
+Focusing on creatures as a "damage-dealing sack of hit points" is a simplified way to understand combat effectiveness and, in the context of this simplified mechanic, an effective one.
+
+A number of "buffs" (enhancements) and "nerfs" (handicaps) to creatures and players can be layered on throughout the game. However, the simplified mechanic (I hit you, you hit me) represents the core of the combat experience, and so understanding this can help game masters working in real-time to select appropriate encounters quickly.
+
+Knowing that the challenge rating system is somewhat conservative is useful as well. Increasing the number of opponents can increase the difficulty quickly by increasing hit points, damage output, and number of attacks in a more significant manner than selecting single creatures of higher challenge ratings. So, as a general rule player party versus single-monster will end up being somewhat easier than player party versus monster party for comparable overall challenge ratings.
+
+The composition of a party matters, and in particular having fighters available early on in game play can help supplement and balance out character types weaker in combat. 
+
+The most surprising result is the relatively lower importance of `ac` and `hit_mod` in predicting combat success. This should be taken in context of a large-scale analysis--in single encounters, a creature that "rarely hits" or "rarely misses" will indeed be highly ineffective or effective (respectively). After all, the game experience is enjoyed in the moment--and the death of a player, while just a tally mark in our analysis, is a significant in-game event. In this way, a conservative challenge rating system may be to everyone's benefit.
+
+While low-level parties are vulnerable, there is a perception among game masters that [high-level parties can be difficult to challenge in combat](http://www.enworld.org/forum/showthread.php?577378-How-viable-is-5E-to-play-at-high-levels). One theory to explain this is that [the linear progression of hit points is out of alignment with the original game designer's vision](http://dmdavid.com/tag/would-dungeons-dragons-play-better-if-it-stayed-loyal-to-how-gary-gygax-awarded-hit-points/). Our analysis of the importance of hit points would tend to support the idea that a "dampened" progression at higher levels would provide one solution. 
+
+However, other options--such as "piling on monsters", as well as a range of "buffs" exist to provide challenge rating parity. One can also adjust the pairings based on the conservative nature of the system (pitting four `cr` 20 fighers against a single cr `30` monster, for example).
+
 ## Opportunities for Further Study
 
+[Matteo Ferla](http://home-matteo-ferla.a3c1.starter-us-west-1.openshiftapps.com/dnd) has programmed a far more extensive simulation of combat. Running his simulations within the context of these techniques could provide another point of validation (or refutation) of these findings.
+
+The trope that [fighters progress linearly whilst spell-casters progress quadratically](https://tvtropes.org/pmwiki/pmwiki.php/Main/LinearWarriorsQuadraticWizards) refers to the "buffs" (spells) that wizards gain. Such a progression clearly exists outside the scope of this research. Simulating maximum damage output and/or the "spell saving throw" mechanic, however, might provide an opportunity to test this widely-held perception.
+
 ## Conclusion
+
+Using regression analysis and machine learning, we have gained insights into the relationship between combat attributes, challenge rating, and combat effectiveness using a simplified version of the combat mechanics of the world's greatest role-playing game. Understanding these mathematical relationships can empower game masters to create more dynamic encounters to maintain the perception in combat that there is both something at stake and worth fighting for. This, after all, is what creates an earned sense of heroic achievement--a unique experience, scare in real life, which gives the game an enduring appeal.
 
 ## Definition of Terms
 
@@ -170,7 +196,7 @@ So, according to both contest results and classification results, wizards get so
 
 ## Acknowledgments
 
-Thanks to Robert Staton for providing review.
+Thanks to Robert Staton and [Matteo Ferla](http://home-matteo-ferla.a3c1.starter-us-west-1.openshiftapps.com/dnd) for reviewing and commenting on this research.
 
 ## Legal Disclaimer
 
