@@ -23,12 +23,9 @@ However, even within the scope of combat--one subset of the role-playing experie
 
 ### Simulating Simplified Combat
 
-#### Mathematical Complexity
-The **fundamental mechanic** of melee combat is difficult to describe mathematically, due in part to the progressions of probable damage outputs across alternating turns and the implications of these probabilities on the overall velocity of the "race toward death" that combat represents. This is complicated in particular by the varying number of attacks per turn. For example, an entity with a 1/20 chance to deal 20 damage to an opponent with 5 `hp` remaining using a single attack has a lower chance of a next-turn kill than an entity with four attacks (single hit probability 4/20) dealing 5 damage, despite both entities having the same average damage output. Therefore, despite the low number of variables involved, describing all of these threshold cases analytically remains potentially calcuable, but complex.
-
 #### Monte Carlo Simulation
 
-However, it is relatively straightforward to simulate this scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
+It is relatively straightforward to simulate a simplified melle compbat scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
 
 ### Implications of Simulation Results
 This fundamental mechanic may also serve as a useful proxy for combat effectiveness within the real, complex game. Assuming this is true, we can make deductions about the relative influence of various configuration elements on combat effectiveness within the actual game. 
