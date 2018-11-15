@@ -189,7 +189,7 @@ Using regression analysis and machine learning, we have gained insights into the
 
 ## Reference
 
-[Jupyter notebook containing all experiments](https://nbviewer.jupyter.org/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb)
+[Live Jupyter notebook on Google Collab](https://colab.research.google.com/github/cyberscribe/d20datascience/blob/master/Creature%20Contest.ipynb)
 
 ## Acknowledgments
 
