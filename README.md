@@ -25,7 +25,7 @@ However, even within the scope of combat--one subset of the role-playing experie
 
 #### Monte Carlo Simulation
 
-It is relatively straightforward to simulate a simplified melle compbat scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
+It is relatively straightforward to simulate a simplified melee combat scenario computationally. By repeatedly simulating this mechanic between a variety of character and creature configurations, we are able to converge on stable results regarding the relative effectiveness of different numerical attribute combinations in relation to this fundamental mechanic.
 
 ### Implications of Simulation Results
 This fundamental mechanic may also serve as a useful proxy for combat effectiveness within the real, complex game. Assuming this is true, we can make deductions about the relative influence of various configuration elements on combat effectiveness within the actual game. 
